@@ -29,16 +29,12 @@ services:
       - 9090:9090
     depends_on:
       - cadvisor
-  # grafana:
-  #   image: grafana/grafana:7.3.6
-  #   ports:
-  #     - 3000:3000
-  #   networks:
-  #     - grafana
-  #   depends_on:
-  #     - cadvisor
-  redis:
-    image: redis:latest
-    container_name: redis
+  grafana:
+    image: grafana/grafana:latest
     ports:
-      - 6379:6379
+      - 3000:3000
+    networks:
+      - grafana
+    depends_on:
+      - cadvisor
+
