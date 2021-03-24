@@ -31,8 +31,6 @@ services:
     image: grafana/grafana:latest
     ports:
       - 3000:3000
-    networks:
-      - grafana
     depends_on:
       - cadvisor
 
