@@ -15,8 +15,6 @@ services:
     # privileged: true
     # devices:
       # - "/dev/kmsg"
-    depends_on:
-      - redis
   prometheus:
     image: prom/prometheus:latest
     container_name: prometheus
